@@ -1,0 +1,21 @@
+# 9 July 2019
+# The purpose of this code is to blast for homologous genes between Oryza sativa and Zizania palustris as a first step in annotation of the genome.
+# For now, this should only be considered exploratory--when new data arrive, we can see how well this method worked
+
+# Load blast software
+module load ncbi_blast+
+
+# Make blast database for the wild rice genome
+makeblastdb -dbtype nucl -in "zizania_palustris_13Nov2018_okGsv.fasta" -out zizania_palustris_genome_db
+
+# Perform blast
+blastn -num_threads 15 -db ~/genome_seq/zizania_palustris_genome_db -query Oryza_sativa.IRGSP-1.0.cds.all.fa >> test_gene_output.txt -outfmt 6
+
+# Print header line for output file
+printf "query_seq_id""\t""subj_seq_id""\t""per_ident""\t""length""\t""num_mismatch""\t""gap_open""\t""query_start""\t""query_end""\t""subj_start""\t""subj_end""\t""e_value""\t""bit_score""\n" > test_gene_output.txt
+
+# This grabs the first line of blast output and appends to a different file-worked with one sample, but would be a bad choice now that I've set it up to run all genes at once
+awk 'NR==1{print $0}' test_gene_output.txt >> out.txt
+
+# This grabs the id names from the fasta file
+grep -o -E "^>\w+" Oryza_sativa.IRGSP-1.0.cds.all.fa > ids.file
