@@ -1,0 +1,9 @@
+# 15 July 2019
+# Code to look for RM106 (shattering marker) from rice (Oryza sativa) in our Zizania palustris assembly
+
+module load ncbi_blast+
+
+blastn -num_threads 10 -db ~/genome_seq/zizania_palustris_genome_db -query RM106.fa > RM106_out.txt
+
+# Note: RM106 sequence came from here: https://archive.gramene.org/db/markers/marker_view?marker_name=RM106&action=marker_search
+# RM106 comes from rice chromosome 2 and maps to Scaffold 93 in our data, supporting other evidence (from MUMmer) that Scaffold 93 shares ancestry with rice chr 2
