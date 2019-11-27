@@ -1,0 +1,9 @@
+# 26 November 2019
+# WD: /home/jkimball/haasx092/reneth_blast
+# Performing BLAST of candidate shattering genes for Reneth
+
+module load ncbi_blast+
+
+blastn -num_threads 10 -db ~/genome_seq/zizania_palustris_genome_db -query OsSH1.fa > OsSH1_out.txt
+
+blastn -num_threads 10 -db ~/genome_seq/zizania_palustris_genome_db -query OsLG1.fa > OsLG1_out.txt
