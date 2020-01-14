@@ -52,7 +52,7 @@ segments(x0=0, x1=0.25, y0=8.6, y1=8.6)
 # Add text on the right side of plot indicating position and # of SNPs
 text(x=0.5, y=95.6, labels="0 Mbp", adj=0, cex=0.6) # Top/beginning
 text(x=0.5, y=0, labels="95.6 Mbp", adj=0, cex=0.6) # Bottom/end
-text(x=0.5, y=92.8, labels="3.0 Mbp (108 SNPs)", adj=0, cex=0.6)
+text(x=0.5, y=93.2, labels="3.0 Mbp (108 SNPs)", adj=0, cex=0.6)
 text(x=0.5, y=90.8, labels="4.8 Mbp (12 SNPs)", adj=0, cex=0.6)
 text(x=0.5, y=88.4, labels="5.8 Mbp (32 SNPs)", adj=0, cex=0.6)
 text(x=0.5, y=85.3, labels="10.3 Mbp (24 SNPs)", adj=0, cex=0.6)
