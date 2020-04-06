@@ -1,0 +1,14 @@
+Ran: Thu Dec 26 12:01:13 CST 2019
+-------------------------------------------------------
+[12:01 PM]: OS: linux2, 128 cores, ~ 264 GB RAM. Python: 2.7.15
+[12:01 PM]: Running funannotate v1.6.0
+[12:01 PM]: Augustus training set for rice already exists. To re-train provide unique --augustus_species argument
+[12:01 PM]: AUGUSTUS (3.2.3) detected, version seems to be compatible with BRAKER and BUSCO
+[12:01 PM]: Fasta headers on your input have more characters than the max (16), reformat headers to continue.
+[12:01 PM]: First 5 header names:
+Scaffold_1;HRSCAF=83
+Scaffold_2;HRSCAF=388
+Scaffold_3;HRSCAF=502
+Scaffold_4;HRSCAF=525
+Scaffold_5;HRSCAF=702
+Done: Thu Dec 26 12:01:29 CST 2019

@@ -1,0 +1,14 @@
+Ran: Thu Jan  9 06:08:49 CST 2020
+[06:09 AM]: OS: linux2, 24 cores, ~ 66 GB RAM. Python: 2.7.12
+[06:09 AM]: Running funannotate v1.5.0
+[06:09 AM]: No NCBI SBT file given, will use default, for NCBI submissions pass one here '--sbt'
+[06:11 AM]: Reannotating rice, NCBI accession: None
+[06:11 AM]: Previous annotation consists of: 46,491 protein coding gene models and 607 non-coding gene models
+[06:11 AM]: Trimmomatic will be skipped
+[06:11 AM]: Read normalization will be skipped
+[06:11 AM]: Parsing assembled trinity data: /home/jkimball/shared/WR_Annotation/Transcriptome_Asm_trinity/Trinity.fasta
+[06:16 AM]: Converting transcript alignments to GFF3 format
+[06:18 AM]: Converting Trinity transcript alignments to GFF3 format
+[06:20 AM]: Running PASA alignment step using 689,269 transcripts
+[08:43 PM]: Running PASA annotation comparison step 1
+=>> PBS: job killed: walltime 345614 exceeded limit 345600

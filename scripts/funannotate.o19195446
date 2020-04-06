@@ -1,0 +1,12 @@
+Ran: Thu Jan  2 10:48:01 CST 2020
+[10:48 AM]: OS: linux2, 128 cores, ~ 264 GB RAM. Python: 2.7.15
+[10:48 AM]: Running funannotate v1.6.0
+[10:48 AM]: No NCBI SBT file given, will use default, for NCBI submissions pass one here '--sbt'
+-------------------------------------------------------
+Traceback (most recent call last):
+  File "/panfs/roc/msisoft/funannotate/1.6.0/bin/funannotate-update.py", line 1622, in <module>
+    if lib.checkRefSeq(GBK):
+  File "/panfs/roc/msisoft/funannotate/1.6.0/lib/library.py", line 2431, in checkRefSeq
+    with open(input, 'rU') as infile:
+TypeError: coercing to Unicode: need string or buffer, NoneType found
+Done: Thu Jan  2 10:48:07 CST 2020

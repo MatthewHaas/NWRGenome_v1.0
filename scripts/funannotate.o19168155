@@ -1,0 +1,13 @@
+Ran: Fri Dec 27 13:42:13 CST 2019
+-------------------------------------------------------
+[01:42 PM]: OS: linux2, 128 cores, ~ 264 GB RAM. Python: 2.7.15
+[01:42 PM]: Running funannotate v1.6.0
+[01:42 PM]: Augustus training set for rice already exists. To re-train provide unique --augustus_species argument
+[01:42 PM]: AUGUSTUS (3.2.3) detected, version seems to be compatible with BRAKER and BUSCO
+[01:42 PM]: Loading genome assembly and parsing soft-masked repetitive sequences
+[01:46 PM]: Genome loaded: 2,183 scaffolds; 1,288,768,912 bp; 76.71% repeats masked
+Traceback (most recent call last):
+  File "/panfs/roc/msisoft/funannotate/1.6.0/bin/funannotate-predict.py", line 557, in <module>
+    with open(f) as input:
+IOError: [Errno 13] Permission denied: '/home/jkimball/shared/WR_Annotation/Transcriptome_Asm_trinity/Trinity.fasta'
+Done: Fri Dec 27 13:47:20 CST 2019

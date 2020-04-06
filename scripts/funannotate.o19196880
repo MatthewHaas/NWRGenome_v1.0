@@ -1,0 +1,30 @@
+Ran: Thu Jan  2 15:18:51 CST 2020
+-------------------------------------------------------
+[03:18 PM]: OS: linux2, 128 cores, ~ 264 GB RAM. Python: 2.7.15
+[03:18 PM]: Running funannotate v1.6.0
+[03:18 PM]: Augustus training set for rice already exists. To re-train provide unique --augustus_species argument
+[03:18 PM]: AUGUSTUS (3.2.3) detected, version seems to be compatible with BRAKER and BUSCO
+[03:19 PM]: Loading genome assembly and parsing soft-masked repetitive sequences
+[03:20 PM]: Genome loaded: 2,183 scaffolds; 1,288,768,912 bp; 76.71% repeats masked
+[03:20 PM]: Existing transcript alignments found: wild_rice2/predict_misc/transcript_alignments.gff3
+[03:20 PM]: Existing RNA-seq BAM hints found: wild_rice2/predict_misc/hints.BAM.gff
+[03:20 PM]: Existing protein alignments found: wild_rice2/predict_misc/protein_alignments.gff3
+[03:22 PM]: Running GeneMark-ES on assembly
+[03:28 PM]: GeneMark-ES failed: wild_rice2/predict_misc/genemark/output/gmhmm.mod file missing, please check logfiles.
+[03:28 PM]: Existing BUSCO results found: wild_rice2/predict_misc/busco.final.gff3 containing 153 predictions
+[03:28 PM]: Existing Augustus annotations found: wild_rice2/predict_misc/augustus.gff3
+[03:29 PM]: GeneMark predictions failed. If you can run GeneMark outside of funannotate, then pass the results to --genemark_gtf.
+[03:29 PM]: Pulling out high quality Augustus predictions
+[03:29 PM]: Found 17,158 high quality predictions from Augustus (>90% exon evidence)
+[03:29 PM]: Running stringie on RNA-seq alignments 
+[03:50 PM]: Running CodingQuarry prediction using stringtie alignments
+[09:32 PM]: CodingQuarry failed, moving on without result, check logfile
+[09:32 PM]: Using existing snap results: wild_rice2/predict_misc/snap-predictions.gff3
+[09:32 PM]: 318,822 predictions from SNAP
+Traceback (most recent call last):
+  File "/panfs/roc/msisoft/funannotate/1.6.0/bin/funannotate-predict.py", line 1195, in <module>
+    if lib.glimmer_run_check(GlimmerPredictions, FinalTrainingModels, StartWeights['glimmerhmm']):
+  File "/panfs/roc/msisoft/funannotate/1.6.0/lib/library.py", line 4827, in glimmer_run_check
+    lob.info('GlimmerHMM failed, dependency not in $PATH: {:}'.format(x))
+NameError: global name 'lob' is not defined
+Done: Thu Jan  2 21:32:12 CST 2020
