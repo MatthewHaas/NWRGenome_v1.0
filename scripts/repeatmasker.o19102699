@@ -1,0 +1,5 @@
+Ran: Thu Dec 19 09:32:20 CST 2019
+RepeatMasker version open-4.0.5
+Search Engine: NCBI/RMBLAST [ 2.2.27+ ]
+RepeatMasker::setspecies: Could not find user specified library combined_repeat_libs.fasta.
+Done: Thu Dec 19 09:32:24 CST 2019

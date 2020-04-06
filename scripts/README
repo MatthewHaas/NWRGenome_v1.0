@@ -1,0 +1,19 @@
+
+# funannotate requires genome fasta headers to be a maximum of 16 characters long
+# need to reformat the genome scaffold headers
+
+python reformat.fasta.header.py
+
+
+# need to reformat the scaffold IDs in the bam file of the combined aligned reads
+module load samtools
+# convert bam to sam file
+samtools view ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.bam > ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.sam
+# change scaffold IDs in sam file
+python reformatted.sam.py ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.sam ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.chromreformatted.sam
+# convert sam file back into bam file
+samtools view -S -b ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.chromreformatted.sam > ../Aligned_reads/rice_rnas2Aligned.sortedByCoord.out.chromreformatted.bam
+
+
+
+

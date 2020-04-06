@@ -1,0 +1,6 @@
+Ran: Thu Dec 26 16:00:10 CST 2019
+Finished bam-to-sam conversion: Thu Dec 26 16:33:29 CST 2019
+Finished sam chromosome reformatting conversion: [E::sam_parse1] missing SAM header
+[W::sam_read1] Parse error at line 1
+[main_samview] truncated file.
+Finished sam-to-bam conversion: Thu Dec 26 17:12:10 CST 2019

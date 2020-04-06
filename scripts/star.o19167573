@@ -1,0 +1,20 @@
+Ran: Fri Dec 27 10:38:46 CST 2019
+Dec 27 10:38:46 ..... started STAR run
+Dec 27 10:38:46 ... starting to generate Genome files
+Dec 27 10:39:25 ... starting to sort Suffix Array. This may take a long time...
+Dec 27 10:39:36 ... sorting Suffix Array chunks and saving them to disk...
+Dec 27 10:44:10 ... loading chunks from disk, packing SA...
+Dec 27 10:44:47 ... finished generating suffix array
+Dec 27 10:44:47 ... generating Suffix Array index
+Dec 27 10:47:35 ... completed Suffix Array index
+Dec 27 10:47:35 ... writing Genome to disk ...
+Dec 27 10:47:39 ... writing Suffix Array to disk ...
+Dec 27 10:48:17 ... writing SAindex to disk
+Dec 27 10:48:23 ..... finished successfully
+Dec 27 10:48:24 ..... started STAR run
+Dec 27 10:48:24 ..... loading genome
+Dec 27 10:48:33 ..... started mapping
+Dec 27 11:38:36 ..... finished mapping
+Dec 27 11:38:39 ..... started sorting BAM
+Dec 27 11:56:19 ..... finished successfully
+Done: Fri Dec 27 11:56:42 CST 2019
