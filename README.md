@@ -10,6 +10,12 @@ Annotation of the Zizania palustris genome
 ## scripts (directory)
 Contains annotation scripts created by Tom and Marissa from RISS
 
+## add_scalebar_to_annotation_photo.html
+HTML version of Jupyter Notebook file below.
+
+## add_scalebar_to_annotation_photo.ipynb
+Jupyter Notebook file containing Python code for adding a scale bar to image of tissues collected for wild rice genome annotation.
+
 ## blast_RM106
 
 ## blast_for_annotation
