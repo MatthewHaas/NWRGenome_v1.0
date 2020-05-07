@@ -29,5 +29,10 @@ Script to execute commands from JCVI software to generate good-looking and infor
 This file contains code to create a visual representation of each chromosome/linkage group/scaffold.
 At present, it only does this for Scaffold 1. I didn't want to spend time on the other scaffolds unless I thought it would be worth while spending the time to do each scaffold (whether for a presentation or for a paper).
 
+## test_gap_counter.py
+Python script to count gaps (strings of Ns) in a given FASTA sequence file.
+
+## test_gap_counter.sh
+Shell script to launch the Python script _test_gap_counter.py_.
 ## zp_os_synteny.txt
 General text file containing code that I ran on the command line to figure out how to make a good-looking and informative synteny plot using python-language programs from JCVI. Also contains comments about some of the problems I encountered and how to solve them. A precursor to the script _run_jcvi.sh_.
