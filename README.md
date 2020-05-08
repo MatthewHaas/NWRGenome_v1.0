@@ -22,7 +22,7 @@ Jupyter Notebook file containing Python code for adding a scale bar to image of 
 
 ## blast_for_shattering_genes.txt
 
-# gap_counter.py
+## gap_counter.py
 Python script to count gaps (strings of Ns) in a given FASTA sequence file.
 
 ## gap_counter.sh
