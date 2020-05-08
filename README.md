@@ -7,6 +7,8 @@ Annotation of the Zizania palustris genome
 
 14 January 2020: This past fall, we decided to seek help from the Minnesota Supercomputing Institute Research Informatics Support Specialists (MSI RISS) for the genome annotation since it somewhat beyond my expertise. Today, they gave us an update via a Powerpoint file with some explanations via email.
 
+8 May 2020: Annotation is complete and we have moved into the stage of compiling genome statistics and generating Tables and Figures for the paper so many of the scripts that are currently being added are to advance these goals.
+
 ## scripts (directory)
 Contains annotation scripts created by Tom and Marissa from RISS
 
