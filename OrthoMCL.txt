@@ -1,6 +1,0 @@
-# 16 March 2020
-# WD: /home/jkimball/haasx092
-# Trying use OrthoMCL for Wild Rice Genome paper
-
-# Path to OrthoMCL files
-/home/jkimball/haasx092/.conda/pkgs/orthomcl-2.0.9-4/bin
