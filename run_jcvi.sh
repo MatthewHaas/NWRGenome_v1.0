@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l nodes=1:ppn=8,mem=30g,walltime=24:00:00
+#PBS -l nodes=1:ppn=8,mem=30g,walltime=6:00:00
 #PBS -m abe
 #PBS -M haasx092@umn.edu
 #PBS -e run_jcvi.err
@@ -23,4 +23,10 @@ sed -i  's/\.MSUv7.0//g' oryza.bed
 sed -i  's/\..*$//g' oryza.cds
 sed -i 's/\-.*$//g' wild_rice.cds
 
-python -m jcvi.compara.catalog ortholog wild_rice oryza --no_strip_names
+python -m jcvi.compara.catalog ortholog wild_rice oryza --cscore=1.0 --no_strip_names
+
+python -m jcvi.graphics.dotplot wild_rice.oryza.anchors
+
+python -m jcvi.compara.synteny screen --minspan=30 --simple wild_rice.oryza.anchors wild_rice.oryza.anchors.new
+
+python -m jcvi.graphics.karyotype seqids layout
