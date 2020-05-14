@@ -34,11 +34,8 @@ Shell script to launch the Python script _gap_counter.py_.
 Script makes a tab-separated table containing the number of gaps in each scaffold/pseudochromosome using the output of the gap_counter.sh/gap_counter.py scripts.
 
 ## run_jcvi.sh
-Script to execute commands from JCVI software to generate good-looking and informative synteny plot for _Z. palustris_ vs. _O. sativa_. The code appears to still have some issues and I'm not sure why it isn't finding the anchors that are necessary to move on to the next step.
+Script to execute commands from JCVI software to generate good-looking and informative synteny plot for _Z. palustris_ vs. _O. sativa_. As of 14 May 2020, code is complete enough to the point that I generated the figure that I wanted to create, but in order to make it publication-worthy, there are at least two major changes I want to make: Scaffold numbers should be replaced with our _Z. palustris_-specific chromosome designations and reordered so that the order follows the _Z. palustris_-specific chromosome order.
 
 ## snp_density_on_linkage_group.R
 This file contains code to create a visual representation of each chromosome/linkage group/scaffold.
 At present, it only does this for Scaffold 1. I didn't want to spend time on the other scaffolds unless I thought it would be worth while spending the time to do each scaffold (whether for a presentation or for a paper).
-
-## zp_os_synteny.txt
-General text file containing code that I ran on the command line to figure out how to make a good-looking and informative synteny plot using python-language programs from JCVI. Also contains comments about some of the problems I encountered and how to solve them. A precursor to the script _run_jcvi.sh_.
