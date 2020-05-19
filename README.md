@@ -9,6 +9,9 @@ Annotation of the Zizania palustris genome
 
 8 May 2020: Annotation is complete and we have moved into the stage of compiling genome statistics and generating Tables and Figures for the paper so many of the scripts that are currently being added are to advance these goals.
 
+## downsampling (directory)
+Contains scripts for downsampling FASTQ files from the pilot GBS project. The aim of this is to test how many SNPs we can get at various depths.
+
 ## scripts (directory)
 Contains annotation scripts created by Tom and Marissa from RISS
 
