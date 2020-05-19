@@ -23,6 +23,25 @@ sed -i  's/\.MSUv7.0//g' oryza.bed
 sed -i  's/\..*$//g' oryza.cds
 sed -i 's/\-.*$//g' wild_rice.cds
 
+# Do a literal search and replace to switch out Dovetail scaffold IDs with our Zizania palustris chromosome numbers
+# This should prevent close matches from being treated the same (e.g., Scaffold_1, Scaffold_13, Scaffold_18, etc)
+sed -i 's/\<Scaffold_1\>/Chr9/g' wild_rice.bed
+sed -i 's/\<Scaffold_3\>/Chr3/g' wild_rice.bed
+sed -i 's/\<Scaffold_7\>/Chr15/g' wild_rice.bed
+sed -i 's/\<Scaffold_9\>/Chr11/g' wild_rice.bed
+sed -i 's/\<Scaffold_13\>/Chr1/g' wild_rice.bed
+sed -i 's/\<Scaffold_18\>/Chr4/g' wild_rice.bed
+sed -i 's/\<Scaffold_48\>/Chr6/g' wild_rice.bed
+sed -i 's/\<Scaffold_51\>/Chr16/g' wild_rice.bed
+sed -i 's/\<Scaffold_70\>/Chr10/g' wild_rice.bed
+sed -i 's/\<Scaffold_93\>/Chr2/g' wild_rice.bed
+sed -i 's/\<Scaffold_415\>/Chr12/g' wild_rice.bed
+sed -i 's/\<Scaffold_693\>/Chr14/g' wild_rice.bed
+sed -i 's/\<Scaffold_1062\>/Chr8/g' wild_rice.bed
+sed -i 's/\<Scaffold_1063\>/Chr7/g' wild_rice.bed
+sed -i 's/\<Scaffold_1064\>/Chr13/g' wild_rice.bed
+sed -i 's/\<Scaffold_1065\>/Chr5/g' wild_rice.bed
+
 python -m jcvi.compara.catalog ortholog wild_rice oryza --cscore=1.0 --no_strip_names
 
 python -m jcvi.graphics.dotplot wild_rice.oryza.anchors
