@@ -1,0 +1,91 @@
+# RGAugury Install Notes
+
+The commands in this file (denoted by a '$' preceding the command) only focus
+on installing dependencies for RGAugury; the contents of
+"run_R_gene_analog_analysis.sh" are just as important to a successful run. 
+
+References to $GROUP and $USER in this file and in
+"run_R_gene_analog_analysis.sh" should be replaced by the reader's group and
+username, as would be written in the path to their home directory. 
+
+I used ~/RGA as a root directory for this project, and in order to mitigate the
+risk of losing important detail in translation, I will keep referring to
+this structure. I assume the RGAugury source has already been downloaded and can
+be placed in ~/RGA/bin. The final directory layout (restricted to a depth of
+two) was as follows: 
+
+RGA 
+  | run_R_gene_analog_analysis.sh
+  | bin
+      | cvit.1.2.1
+      | libpng-1.6.37
+      | pfamdb
+      | PfamScan
+      | rgaugury
+  | inputFiles
+      | augustus.pasa.proteins.fa
+      | rice.gene_strucutres_post_PASA_updates.21917.gff3
+      | Zizania_palustris_0.1_CDS.fasta.gz
+
+
+####################
+## Perl Dependencies
+####################
+
+For the installation, it is important to load the "perl/modules.centos7.5.26.1"
+version of Perl. 
+
+$ module load perl/modules.centos7.5.26.1
+$ perl -MCPAN -Mlocal::lib -e 'install Moose'
+$ perl -MCPAN -Mlocal::lib -e 'install GD'
+$ perl -MCPAN -Mlocal::lib -e 'install GD::SVG'
+$ perl -MCPAN -Mlocal::lib -e 'install GD::Arrow'
+$ perl -MCPAN -Mlocal::lib -e 'install GD::Text'
+$ perl -MCPAN -Mlocal::lib -e 'install Config::IniFiles'
+
+If these packages cannot be found, you can manually add the local perl5 lib to
+the path with this command:
+
+$ eval $(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib) 
+
+
+########################
+## Software Dependencies
+########################
+
+The following instructions assume a current working directory of ~/RGA/bin
+
+### PFAM_SCAN
+$ wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/Tools/PfamScan.tar.gz
+$ tar -xzf PfamScan.tar.gz
+$ rm PfamScan.tar.gz
+
+### Pfam DB
+$ mkdir pfamdb && cd pfamdb
+$ wget ftp://ftp.ebi.ac.uk/pub/databases/Pfam/current_release/Pfam-A.hmm.gz
+$ gunzip Pfam-A.hmm.gz
+$ module load hmmer
+$ hmmpress Pfam-A.hmm
+
+Edit RGAugury.pl, set $pfam_index_folder on line 66 to
+/home/$GROUP/$USER/RGA/bin/pfamdb
+
+### CViT
+A copy of these files are available in /home/msistaff/public
+$ tar -xzf /home/msistaff/public/cvit.1.2.1.tar.gz -C .
+
+
+#######################
+## Library Dependencies
+#######################
+
+The following instructions assume a current workign directory of ~/RGA/bin
+
+### LIBPNG
+A copy is available in /home/msistaff/public
+$ tar -xzf /home/msistaff/public/libpng-1.6.37.tar.gz -C .
+$ cd libpng-1.6.37
+$ ./configure —prefix=`pwd`
+$ make check  # ensure everything passes here
+$ make install
+
